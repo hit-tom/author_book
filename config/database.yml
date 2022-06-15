@@ -93,13 +93,10 @@ test:
 #
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
-#
-# production:
-#   <<: *default
-#   adapter: postgresql
-#   database: <%= ENV['TEMPLATEAPP_DATABASE'] %>
-#   username: <%= ENV['TEMPLATEAPP_DATABASE_USER'] %>
-#   password: <%= ENV['TEMPLATEAPP_DATABASE_PASSWORD'] %>
-#   host: <%= ENV['TEMPLATE_DATABASE_HOSTNAME'] %>
-#   port: 5432
+
+production:
+  <<: *default
+  database: author_production
+  username: myapp
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
 
